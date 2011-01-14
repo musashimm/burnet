@@ -5,11 +5,11 @@ If you work with embedded Linux you can choose to approaches to use:
  * use some Linux distribution 
  * use _Buildroot_ and build Your own system form scratch
 
-I took second way. It has no limitation in my opinion but for example you must build all software packeges by yourself. Second way gives you also possibility to use of newest software packeges and drivers than in any distribiution.
+I took second way. It has no limitation in my opinion but for example you must build almost all software packages not included in _Buildroot_ package by yourself. Second way gives you also possibility to use of newest software packages and drivers than in any distribution.
 
 h1. Hardware
 
-Hardware I use is MMNet1002 board developed by Propox. You can get much details form "Propox webpage":http://www.propox.com/products/t_232.html
+Hardware I use is MMNet1002 board developed by Propox. You can get much details form "Propox web page":http://www.propox.com/products/t_232.html
 
 h1. Software versions
 
@@ -24,12 +24,12 @@ h1. Usage of package
  # Do some links ....
  # Do make 
 
-h1. Support of onboard hardware
+h1. Support of on board hardware
  
  * debug console on ttyS0 (DSUB)
  * ethernet (RJ45)
  * USB
- ** host (builtin)
+ ** host (built-in)
  ** storage class (module)
  ** UVC - usb video class (module)
  * I2C - (module)
