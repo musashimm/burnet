@@ -1,0 +1,35 @@
+menuconfig BR2_TARGET_PROPOX
+    depends on (BR2_arm && BR2_arm926t && BR2_ARM_EABI)
+	bool "Propox boards support"
+
+if BR2_TARGET_PROPOX
+
+    config BR2_TARGET_PROPOX_MMNET1002
+	bool "MMNet1002 Board"
+	help
+	  This option enables support for Propox MMNet1002 board
+
+    config BR2_SUPPLIER_PATH
+    string
+    default "target/device/Propox"
+
+    if BR2_TARGET_PROPOX_MMNET1002
+        config BR2_BOARD_NAME
+        string
+        default "MMNet1002"
+    endif
+
+    config BR2_BOARD_PATH
+    string
+    default "$(BR2_SUPPLIER_PATH)/$(BR2_BOARD_NAME)"
+
+    config BR2_KERNEL_MMNET1002_PATCH_VERSION
+    string
+    depends on BR2_KERNEL_MMNET1002_PATCH_ENABLED
+    default "2.6.36.1"
+
+    config BR2_KERNEL_MMNET1002_PATCH_DIR
+    string
+    default "$(BR2_SUPPLIER_PATH)/kernel-patches-$(BR2_KERNEL_MMNET1002_PATCH_VERSION)"
+
+endif

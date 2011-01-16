@@ -1,0 +1,16 @@
+
+#null::sysinit:/bin/mount -t tmpfs none /dev
+#null::sysinit:/bin/mkdir -p /dev/pts
+#null::sysinit:/bin/mount -a
+
+echo "Loading kernel modules"
+modprobe uvcvideo
+modprobe usb_storage
+modprobe vfat
+
+echo "Setting hostname"
+/bin/hostname -F /etc/hostname
+
+echo "Setting system time"
+hwclock -s
+
