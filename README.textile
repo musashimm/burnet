@@ -44,9 +44,9 @@ If you want to change something in configuration _Buildroot_ package makes avail
 * _make uclibc-menuconfig_ - configuration of _uClibc_
 * _make linux26-menuconfig_ - configuration of linux kernel
 
-*NOTE!* After configuration, copy .config files to *BURNET_DIR*/Propox/MMNet1002/configs/directory.
+*NOTE!* After configuration, copy .config files to _*BURNET_DIR*/Propox/MMNet1002/configs/_ directory.
 
-If above configuration don't suit you can do some customization using *BURNET_DIR*/Propox/MMNet1002/prepare_custom_config.sh
+If above configuration don't suit you can do some customization using _*BURNET_DIR*/Propox/MMNet1002/prepare_custom_config.sh_
 
 h1. Support of on board hardware
 
