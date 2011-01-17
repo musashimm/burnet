@@ -37,7 +37,7 @@ After build in _*BUILDROOT_DIR*/output/images/_ you have images to flash memory:
 
 h1. Customization
 
-If you want to change something in configuration _Buildroot_ package makes available some useful configuration commands:
+If you want to change something in configuration, _Buildroot_ package makes available some useful configuration commands:
 
 * _make menuconfig_ - configuration of _Buildroot_
 * _make busybox-menuconfig_ - configuration of _Busybox_
