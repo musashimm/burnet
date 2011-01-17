@@ -11,7 +11,7 @@ I took second way. It has no limitation in my opinion but for example you must b
 
 h1. Hardware
 
-Hardware I use is MMNet1002 board developed by Propox. You can get much details form "Propox web page":http://www.propox.com/products/t_232.html
+Hardware I use is MMNet1002 board developed by Propox. You can get much details form "Propox web page":http://www.propox.com/products/t_232.html .
 
 h1. Software versions
 
