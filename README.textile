@@ -1,4 +1,3 @@
-
 BURNET - _BU_ild_R_ootformm_NET_1002
 
 h1. Introduction
@@ -25,25 +24,27 @@ h1. Usage of package
 
 # Install _Buildroot_ package to *BUILDROOT_DIR*
 # Install _Burnet_ package to *BURNET_DIR*
-# Change directory to *BUILDROOT_DIR8
-# Type _make_ (choose for Target Architecture -> _arm_, for Target Architecture Variant -> _arm926t_, for Kernel choose newest one) then choose _Exit_ and save .config file
-# Type _make_ once again (it builds toolchain)
 # Make symbolic link ln -s *BURNET_DIR*/Propox *BUILDROOT_DIR*/target/device
-# Modify *BUILDROOT_DIR*/target/device/Config.in file: add _source "target/device/Propox/Config.in"_ after all sources entries.
-# Ad symbolic link _ln -s *BURNET_DIR*/Propox/MMNet1002/configs/buildroot.config *BUILDROOT_DIR*/configs/ MMNet1002_defconfig_
-# Type _make MMNet1002_defconfig_ in *BUILDROOT_DIR* to
-# Type _make_ to build all stuff.
+# Make symbolic link ln -s *BURNET_DIR*/Propox/MMNet1002/configs/buildroot.config *BUILDROOT_DIR*/configs/MMNet1002_defconfig
+# Change directory to *BUILDROOT_DIR*
+# Type _make_ MMNet1002_defconfig (to configure)
+# Type _make_ (to_build)
+
+After build in *BUILDROOT_DIR*/output/images/ you have images to flash memory:
+* uImage - kernel image
+* rootfs.ext - rootfs image, you can mount it in local system to check that everything is inside.
+* rootfs.ubifs - rootfs image to flash NAND.
 
 h1. Customization
 
-If you want to chanage something in configuration _Buildroot_ package makes available some useful configuration commands:
+If you want to change something in configuration _Buildroot_ package makes available some useful configuration commands:
 
 * _make menuconfig_ - configuration of _Buildroot_
-* _make busybox-menuconfig - configuration of _Busybox_
-* _make uclibc-menuconfig - configuration of _uClibc_
-* _make linux26-menuconfig - configuration of linux kernel
+* _make busybox-menuconfig_ - configuration of _Busybox_
+* _make uclibc-menuconfig_ - configuration of _uClibc_
+* _make linux26-menuconfig_ - configuration of linux kernel
 
-NOTE! After configuration, copy .config files to *BURNET_DIR*/Propox/MMNet1002/configs/directory.
+*NOTE!* After configuration, copy .config files to *BURNET_DIR*/Propox/MMNet1002/configs/directory.
 
 If above configuration don't suit you can do some customization using *BURNET_DIR*/Propox/MMNet1002/prepare_custom_config.sh
 
