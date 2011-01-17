@@ -24,10 +24,10 @@ h1. Usage of package
 
 # Install _Buildroot_ package to *BUILDROOT_DIR*
 # Install _Burnet_ package to *BURNET_DIR*
-# Make symbolic link ln -s *BURNET_DIR*/Propox *BUILDROOT_DIR*/target/device
-# Make symbolic link ln -s *BURNET_DIR*/Propox/MMNet1002/configs/buildroot.config *BUILDROOT_DIR*/configs/MMNet1002_defconfig
+# Make symbolic link _ln -s *BURNET_DIR*/Propox *BUILDROOT_DIR*/target/device_
+# Make symbolic link _ln -s *BURNET_DIR*/Propox/MMNet1002/configs/buildroot.config *BUILDROOT_DIR*/configs/MMNet1002_defconfig_
 # Change directory to *BUILDROOT_DIR*
-# Type _make_ MMNet1002_defconfig (to configure)
+# Type _make MMNet1002_defconfig_ (to configure)
 # Type _make_ (to_build)
 
 After build in *BUILDROOT_DIR*/output/images/ you have images to flash memory:
