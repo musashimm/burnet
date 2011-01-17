@@ -30,7 +30,7 @@ h1. Usage of package
 # Type _make MMNet1002_defconfig_ (to configure)
 # Type _make_ (to_build)
 
-After build in *BUILDROOT_DIR*/output/images/ you have images to flash memory:
+After build in _*BUILDROOT_DIR*/output/images/_ you have images to flash memory:
 * uImage - kernel image
 * rootfs.ext - rootfs image, you can mount it in local system to check that everything is inside.
 * rootfs.ubifs - rootfs image to flash NAND.
