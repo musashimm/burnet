@@ -15,19 +15,61 @@ Hardware I use is MMNet1002 board developed by Propox. You can get much details 
 
 h1. Software versions
 
- * Buildroot - 2010.11
- * BusyBox - 1.17
- * Linux Kernel - 2.6.36
- * uClibc - 0.9.31
+Besides of buildroot package file (version *2010.11*) you should have following files in dl directory:
+
+* autoconf-2.65.tar.bz2
+* automake-1.11.1.tar.bz2
+* binutils-2.20.1.tar.bz2
+* busybox-1.17.4.tar.bz2
+* dhcp-4.1.1-P1.tar.gz
+* dropbear-0.52.tar.gz
+* e2fsprogs-1.41.12.tar.gz
+* ethtool-2.6.35.tar.gz
+* fakeroot_1.9.5.tar.gz
+* gcc-4.3.5.tar.bz2
+* genext2fs-1.4.1.tar.gz
+* gmp-4.2.4.tar.bz2
+* gnuchess-5.07.tar.gz
+* i2c-tools-3.0.2.tar.bz2
+* ipkg-0.99.163.tar.gz
+* jpegsrc.v8b.tar.gz
+* libtool-2.2.10.tar.gz
+* libusb-1.0.8.tar.bz2
+* libusb-compat-0.1.3.tar.bz2
+* lighttpd-1.4.28.tar.gz
+* linux-2.6.36.1.tar.bz2
+* lzma-4.32.7.tar.gz
+* lzo-2.03.tar.gz
+* m4-1.4.9.tar.bz2
+* mii-diag_2.11-2.diff.gz
+* mii-diag_2.11.orig.tar.gz
+* module-init-tools-3.12.tar.bz2
+* mpfr-2.4.1.patch
+* mpfr-2.4.1.tar.bz2
+* mtd-utils-1.4.1.tar.bz2
+* mtd-utils-1.4.1.tar.gz
+* ncurses-5.7.tar.gz
+* nfs-utils-1.0.10.tar.gz
+* php-5.2.14.tar.bz2
+* pkg-config-0.23.tar.gz
+* readline-6.1.tar.gz
+* ruby-1.9.2-p0.tar.gz
+* sqlite-amalgamation-3.7.3.tar.gz
+* u-boot-2010.03.tar.bz2
+* uClibc-0.9.31.tar.bz2
+* udev-114.tar.bz2
+* usb-modeswitch-1.1.2.tar.bz2
+* usbutils-0.90.tar.gz
+* zlib-1.2.5.tar.bz2
+
+These files should be downloaded automatically, but if not, download them manually and put to *BUILDROOT_DIR*/dl directory
 
 h1. Usage of package
 
-# Install _Buildroot_ package to *BUILDROOT_DIR*
-# Install _Burnet_ package to *BURNET_DIR*
-# Make symbolic link _ln -s *BURNET_DIR*/Propox *BUILDROOT_DIR*/target/device_
-# Make symbolic link _ln -s *BURNET_DIR*/Propox/MMNet1002/configs/buildroot.config *BUILDROOT_DIR*/configs/MMNet1002_defconfig_
-# Change directory to *BUILDROOT_DIR*
-# Type _make MMNet1002_defconfig_ (to configure)
+# Unpack _Buildroot_ package to *BUILDROOT_DIR*
+# Unpack _Burnet_ package to *BURNET_DIR*
+# Go to *BURNET_DIR* and use merge.sh script to merge both packages. (without parameters merge.sh script shows how to use it).
+# Go to *BUILDROOT_DIR*
 # Type _make_ (to_build)
 
 After build in _*BUILDROOT_DIR*/output/images/_ you have images to flash memory:
@@ -44,11 +86,11 @@ If you want to change something in configuration, _Buildroot_ package makes avai
 * _make uclibc-menuconfig_ - configuration of _uClibc_
 * _make linux26-menuconfig_ - configuration of linux kernel
 
-*NOTE!* After configuration, copy .config files to _*BURNET_DIR*/Propox/MMNet1002/configs/_ directory.
+*NOTE!* After configuration, copy .config file to _*BURNET_DIR*/Propox/MMNet1002/configs/_ directory with proper name.
 
-If above configuration don't suit you can do some customization using _*BURNET_DIR*/Propox/MMNet1002/prepare_custom_config.sh_
+If above configuration doesn't suit you, you can do some customization using _*BURNET_DIR*/Propox/MMNet1002/prepare_custom_config.sh_
 
-h1. Support of on board hardware
+h1. Support of onboard hardware
 
  * debug console on ttyS0 (DSUB)
  * ethernet (RJ45)
