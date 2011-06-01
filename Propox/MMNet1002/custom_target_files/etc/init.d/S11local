@@ -7,6 +7,8 @@ echo "Loading kernel modules"
 modprobe uvcvideo
 modprobe usb_storage
 modprobe vfat
+modprobe leds-gpio
+modprobe ledtrig-heartbeat
 
 echo "Setting hostname"
 /bin/hostname -F /etc/hostname

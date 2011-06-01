@@ -1,0 +1,11 @@
+
+1. RTC
+
+Problem:
+	hwclock: RTC_RD_TIME: Invalid or incomplete multibyte or wide character
+	rtc-at91sam9 at91_rtt.0: hctosys: unable to read the hardware clock
+
+Rozwiązanie:
+	Wymienić baterię.
+	Ustawić czas systemowy: date -s "2011-06-01 22:06"
+	Wpisać do RTC: hwclock -w

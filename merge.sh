@@ -29,9 +29,10 @@ function buildroot_2010_11 {
 
 function buildroot_2011_02 {
 	ln -s $BURNET_DIR/Propox $BUILDROOT_DIR/target/device/Propox
-	ln -s $BURNET_DIR/Propox $BUILDROOT_DIR/board/Propox
+	ln -s $BUILDROOT_DIR/target/device/Propox $BUILDROOT_DIR/board/Propox
 	ln -s $DL_DIR $BUILDROOT_DIR/dl
 	ln -s $BURNET_DIR/Propox/MMNet1002/configs/buildroot-2011.02.config $BUILDROOT_DIR/configs/MMNet1002_defconfig
+	cat $BURNET_DIR/clean_target.makefile >> $BUILDROOT_DIR/Makefile
 	cd $BUILDROOT_DIR
 	make MMNet1002_defconfig
 }
