@@ -1,5 +1,5 @@
---- /usr/src/linux-2.6.37-gentoo-r4/arch/arm/mach-at91/board-sam9260ek.c	2011-01-05 01:50:19.000000000 +0100
-+++ /usr/src/linux-2.6.36-gentoo-r8/arch/arm/mach-at91/board-sam9260ek.c	2011-06-16 09:13:49.000000000 +0200
+--- /arch/arm/mach-at91/board-sam9260ek.c	2010-11-22 20:03:49.000000000 +0100
++++ /board-mmnet1000.c	2010-12-16 13:28:01.000000000 +0100
 @@ -54,7 +54,7 @@
  	/* Initialize processor: 18.432 MHz crystal */
  	at91sam9260_initialize(18432000);
@@ -143,8 +143,8 @@
 -	/* Maintainer: Atmel */
 +MACHINE_START(AT91SAM9260EK, "Apex Systems Easyplus")
 +	/* Maintainer: Sagaert Johan Apex */
-+	.phys_io	= AT91_BASE_SYS,
-+	.io_pg_offst	= (AT91_VA_BASE_SYS >> 18) & 0xfffc,
++//	.phys_io	= AT91_BASE_SYS,
++//	.io_pg_offst	= (AT91_VA_BASE_SYS >> 18) & 0xfffc,
  	.boot_params	= AT91_SDRAM_BASE + 0x100,
  	.timer		= &at91sam926x_timer,
  	.map_io		= ek_map_io,

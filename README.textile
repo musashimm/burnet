@@ -1,5 +1,7 @@
 *BURNET - _BU_ild_R_ootformm_NET_1002*
 
+*NOTE!* Please check devel branch before asking. Thx.
+
 h1. Introduction
 
 If you work with embedded Linux you can choose to approaches to take:
